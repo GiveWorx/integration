@@ -53,50 +53,116 @@ If you're willing to create your own custom integration, follow the specificatio
 
 # API Specifications
 
-> `POST` /init
+`API_URL`: **production**: https://donate.giveworx.com | **qc**: https://qcdonate.giveworx.com
+
+
+> `POST` API_URL/Transaction/Initiate
 
 **Parameters**
 
-| Name         | Type    | In     | Description                                   |
-| ------------ | ------- | ------ | --------------------------------------------- |
-| `accept`     | string  | header | Setting to `application/json` is recommended. |
-| `campaignId` | integer | body   | **Required**                                  |
-
-## Code samples
-
-- [Shell](#shell)
-- [JavaScript](#javascript)
-- [Node.js](#nodejs)
-
-### Shell
-
-```shell
-curl \
-  -X POST \
-  -H "Accept: application/vnd.github.v3+json" API_URL \
-  -d '{"text":"text"}'
-```
-
-### JavaScript
-
-```js
-fetch("/init/", {
-  method: "post",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
+```json
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Token": {
+      "type": "string"
+    },
+    "transactionStatus": {
+      "type": "boolean"
+    },
+    "languageId": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "merchant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "donationDetails": {
+      "type": "object",
+      "properties": {
+        "donorBillingAddressLine2": {
+          "type": "string"
+        },
+        "donorBillingAddressCity": {
+          "type": "string"
+        },
+        "donorBillingAddressLine1": {
+          "type": "string"
+        },
+        "donorBillingAddressState": {
+          "type": "string"
+        },
+        "donorPhoneNumber": {
+          "type": "string"
+        },
+        "donorBillingAddressCountry": {
+          "type": "string"
+        },
+        "donorBillingAddressPostalCode": {
+          "type": "string"
+        },
+        "donorCardDetails": {
+          "type": "object",
+          "properties": {
+            "donorCardExpiryDate": {
+              "type": "string"
+            },
+            "cardNumber": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "donorCardExpiryDate",
+            "cardNumber"
+          ]
+        },
+        "donationOptInFlag": {
+          "type": "boolean"
+        },
+        "donorLastName": {
+          "type": "string"
+        },
+        "donorFirstName": {
+          "type": "string"
+        },
+        "donoremailid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "donorBillingAddressLine2",
+        "donorBillingAddressCity",
+        "donorBillingAddressLine1",
+        "donorBillingAddressState",
+        "donorPhoneNumber",
+        "donorBillingAddressCountry",
+        "donorBillingAddressPostalCode",
+        "donorCardDetails",
+        "donationOptInFlag",
+        "donorLastName",
+        "donorFirstName",
+        "donoremailid"
+      ]
+    }
   },
-  // -- make sure to serialize your JSON body
-  body: JSON.stringify({
-    campaignId: 123,
-  }),
-})
-  .then((response) => {
-    // -- handle the response
-  })
-  .catch((err) => {
-    // -- always catch the errors
-  });
+  "required": [
+    "Token",
+    "transactionStatus",
+    "languageId",
+    "username",
+    "merchant",
+    "donationDetails"
+  ]
+}
 ```
-
-### Node.js
