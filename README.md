@@ -60,8 +60,6 @@ If you're willing to create your own custom integration, follow the specificatio
 
 **JSON Schema**
 
-Generate custom code based on this schema with [quicktype.io](https://quicktype.io/)
-
 ```json
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
