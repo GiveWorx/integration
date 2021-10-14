@@ -58,7 +58,9 @@ If you're willing to create your own custom integration, follow the specificatio
 
 > `POST` API_URL/Transaction/Initiate
 
-**Parameters**
+**JSON Schema**
+
+Generate custom code based on this schema with [quicktype.io](https://quicktype.io/)
 
 ```json
 {
