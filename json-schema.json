@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "Token": {
+      "type": "string"
+    },
+    "transactionStatus": {
+      "type": "boolean"
+    },
+    "languageId": {
+      "type": "integer"
+    },
+    "username": {
+      "type": "string"
+    },
+    "merchant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "donationDetails": {
+      "type": "object",
+      "properties": {
+        "donorBillingAddressLine2": {
+          "type": "string"
+        },
+        "donorBillingAddressCity": {
+          "type": "string"
+        },
+        "donorBillingAddressLine1": {
+          "type": "string"
+        },
+        "donorBillingAddressState": {
+          "type": "string"
+        },
+        "donorPhoneNumber": {
+          "type": "string"
+        },
+        "donorBillingAddressCountry": {
+          "type": "string"
+        },
+        "donorBillingAddressPostalCode": {
+          "type": "string"
+        },
+        "donorCardDetails": {
+          "type": "object",
+          "properties": {
+            "donorCardExpiryDate": {
+              "type": "string"
+            },
+            "cardNumber": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "donorCardExpiryDate",
+            "cardNumber"
+          ]
+        },
+        "donationOptInFlag": {
+          "type": "boolean"
+        },
+        "donorLastName": {
+          "type": "string"
+        },
+        "donorFirstName": {
+          "type": "string"
+        },
+        "donoremailid": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "donorBillingAddressLine2",
+        "donorBillingAddressCity",
+        "donorBillingAddressLine1",
+        "donorBillingAddressState",
+        "donorPhoneNumber",
+        "donorBillingAddressCountry",
+        "donorBillingAddressPostalCode",
+        "donorCardDetails",
+        "donationOptInFlag",
+        "donorLastName",
+        "donorFirstName",
+        "donoremailid"
+      ]
+    }
+  },
+  "required": [
+    "Token",
+    "transactionStatus",
+    "languageId",
+    "username",
+    "merchant",
+    "donationDetails"
+  ]
+}
