@@ -51,7 +51,7 @@ window.giveworxWidget.init({
 
 If you're willing to create your own custom integration, follow the specifications below.
 
-# API Specifications
+# API Specifications (custom integration)
 
 `API_URL`: **production**: https://donate.giveworx.com | **qc**: https://qcdonate.giveworx.com
 
