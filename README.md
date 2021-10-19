@@ -237,3 +237,85 @@ Response object:
   ]
 }
 ```
+Response object:
+
+**JSON Schema**
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "requestID": {
+      "type": "guid"
+    },
+    "isRedirect": {
+      "type": "boolean"
+    },
+    "redirectURL": {
+      "type": "string"
+    },
+    "returnURL": {
+      "type": "string"
+    },
+    "merchantJSURL": {
+      "type": "string"
+    },
+    "languageID": {
+      "type": "integer"
+    },
+    "merchantID": {
+      "type": "integer"
+    },
+    "responseType": {
+      "type": "integer"
+    },
+    "transactionStatusTypes": {
+      "type": "integer"
+    },
+    "landingPageResponseDisplayText": {
+      "type": "string"
+    },
+    "errorCode": {
+      "type": "string"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "campaignId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "requestID",
+    "isRedirect",
+    "redirectURL",
+    "returnURL",
+    "merchantJSURL",
+    "languageID",
+    "merchantID",
+    "responseType",
+    "transactionStatusTypes",
+    "landingPageResponseDisplayText",
+    "errorCode",
+    "errorMessage",
+    "campaignId"
+  ]
+}
+```
+Properties info:
+| Key            |  Type    | Description                              |
+| -------------- |  ------- | ---------------------------------------- |
+| `requestID`   |  guid |                             |
+| `isRedirect` |  boolean  | true when the redirect is hosted by customer, false otherwise                           |
+| `redirectURL`     |  string  | API_URL + "/Donation/Index" - this is the API called to return the donation popup html                    |
+| `returnURL`  |  string | the URL to return after the donation is done                            |
+| `merchantJSURL`     |  string | JavaScript library URL. This library is used by widget |
+| `languageID`|  integer | the merchant language if set or the default one. 1 English, 2 French, 3 Spanish|
+| `merchantID`|  integer| the merchant id|
+| `responseType`|  integer|  Sucessfull = 0, SucessMessage = 1, GenericError = -1, BusinessError = -2, UnAuthorized = -3, PasswordExpired = -4, PaymentFailure = -5, SessionTimeOut = -100, PaymentServerExecption = -101|
+| `transactionStatusTypes`|  integer| TransactionInitiated = 1, ApplicationLoad = 12, NoThanks = 13, ApplicationError = 14, Recurring = 15, PaymentInitiated = 2, PaymentSuccess = 3, PaymentFailed = 4, PaymentServerExecption = 5|
+| `landingPageResponseDisplayText`|  string| a message displayed on Order Confirm Form|
+| `errorCode`|  string| the error code (if any)|
+| `errorMessage`|  string| the error message (if any)|
+| `campaignId`|  integer| the campaign id|
