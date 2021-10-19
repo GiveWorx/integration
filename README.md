@@ -48,6 +48,12 @@ window.giveworxWidget.init({
 });
 ```
 
+**Other ways of integration:**
+
+* [Username/password](username-password-integration.md) ⚠️ deprecated
+* [AtWork](atwork-integration.md)
+
+
 If you're willing to create your own custom integration, follow the specifications below.
 
 # API Specifications (custom integration)
