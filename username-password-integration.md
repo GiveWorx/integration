@@ -42,3 +42,14 @@ If you're looking to integrate with your website:
     }
 }
 ```
+
+```js
+window.giveworxWidget.init({
+  Merchant: {
+    Id: MERCHANT_ID,
+  },
+  DonationDetails: {
+    DonorCardDetails: {},
+  }
+});
+```
