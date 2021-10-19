@@ -27,12 +27,18 @@ If you're looking to integrate with your website:
 
 | Key            | Required | Type    | Description                              |
 | -------------- | -------- | ------- | ---------------------------------------- |
-| `CampaignId`   | Yes      | integer | Campaign ID                              |
-| `CampaignName` | Yes      | string  | Campaign Name                            |
+| `Username`     | Yes      | string  | Backoffice account                       |
+| `Password`     | Yes      | string  | Backoffice accoun password               |
 | `Merchant`     | Yes      | object  | Merchant properties                      |
 | `Merchant.Id`  | Yes      | integer | Merchant ID                              |
-| `IsAtWork`     | No       | boolean | Only required if used via AtWork website |
 
 ```js
-TO DO
+{	
+    "Username": "USERNAME",
+    "Password": "PASSWORD",
+    "Merchant": {"Id":"MERCHANT_ID"},
+    "DonationDetails": {
+        "DonorCardDetails":{}
+    }
+}
 ```
