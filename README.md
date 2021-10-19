@@ -275,18 +275,58 @@ Content-Type: application/json
 
 **Properties info:**
 
-| Key            |  Type    | Description                              |
-| -------------- |  ------- | ---------------------------------------- |
-| `requestID`   |  guid |   token used for "/Donation/Index" API call. This call return the popup HTML.                       |
-| `isRedirect` |  boolean  | true when the redirect is hosted by customer, false otherwise                           |
-| `redirectURL`     |  string  | API_URL + "/Donation/Index" - this is the API called to return the donation popup html                    |
-| `returnURL`  |  string | the URL to return after the donation is done                            |
-| `merchantJSURL`     |  string | JavaScript library URL. This library is used by widget |
-| `languageID`|  integer | the merchant language if set or the default one. 1 English, 2 French, 3 Spanish|
-| `merchantID`|  integer| the merchant id|
-| `responseType`|  integer|  Sucessfull = 0, SucessMessage = 1, GenericError = -1, BusinessError = -2, UnAuthorized = -3, PasswordExpired = -4, PaymentFailure = -5, SessionTimeOut = -100, PaymentServerExecption = -101|
+| Key             |  Type    | Description                              |
+| --------------- |  ------- | ---------------------------------------- |
+| `requestID`     |  guid    |   token used for "/Donation/Index" API call. This call return the popup HTML.                       |
+| `isRedirect`    |  boolean | true when the redirect is hosted by customer, false otherwise                           |
+| `redirectURL`   |  string  | API_URL + "/Donation/Index" - this is the API called to return the donation popup html                    |
+| `returnURL`     |  string  | the URL to return after the donation is done                            |
+| `merchantJSURL` |  string  | JavaScript library URL. This library is used by widget |
+| `languageID`    |  integer | the merchant language if set or the default one. 1 English, 2 French, 3 Spanish|
+| `merchantID`    |  integer | the merchant id|
+| `responseType`  |  integer |  Sucessfull = 0, SucessMessage = 1, GenericError = -1, BusinessError = -2, UnAuthorized = -3, PasswordExpired = -4, PaymentFailure = -5, SessionTimeOut = -100, PaymentServerExecption = -101|
 | `transactionStatusTypes`|  integer| TransactionInitiated = 1, ApplicationLoad = 12, NoThanks = 13, ApplicationError = 14, Recurring = 15, PaymentInitiated = 2, PaymentSuccess = 3, PaymentFailed = 4, PaymentServerExecption = 5|
 | `landingPageResponseDisplayText`|  string| a message displayed on Order Confirm Form|
-| `errorCode`|  string| the error code (if any)|
-| `errorMessage`|  string| the error message (if any)|
-| `campaignId`|  integer| the campaign id|
+| `errorCode`     |  string | the error code (if any)|
+| `errorMessage`  |  string | the error message (if any)|
+| `campaignId`    |  integer| the campaign id|
+
+
+ENV                                   | Method  |  Endpoint
+--------------------------------------|---------|-------------------------
+`PROD` https://donate.giveworx.com    | `POST`  | **/Donation/Index**
+`QC` https://donate.giveworx.com      | `POST`  | **/Donation/Index**
+
+
+**Example request**
+The values should be taken from the previous call response.
+
+Content-Type: application/json
+```json
+{	
+    "guid": "requestID",
+    "isredirect": "isRedirect",
+    "returnURL": "returnURL",
+    "languageID": "languageID",
+    "q2CallbackUrl": "q2CallbackUrl",
+    "userId": "userId",
+}
+```
+
+**Properties info:**
+
+| Key             |  Type    | Description                              |
+| --------------- |  ------- | ---------------------------------------- |
+| `guid`     |  string    |   the requestID returned from previous call                       |
+| `isredirect`     |  boolean    |   the isredirect returned from previous call                       |
+| `returnURL`     |  string    |   the returnURL returned from previous call                       |
+| `languageID`     |  string    |   the languageID returned from previous call                       |
+| `q2CallbackUrl`     |  string    |   optional parameter. this field is used for Q2 transactions so for this integration will be sent as null                       |
+| `userId`     |  string    |   optional parameter. this field is used for Q2 transactions so for this integration will be sent as null                       |
+
+
+
+
+
+
+
