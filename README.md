@@ -29,16 +29,11 @@ If you're looking to integrate with your website:
 
 | Key            | Required | Type    | Description                              |
 | -------------- | -------- | ------- | ---------------------------------------- |
-| `CampaignId`   | Yes      | integer | Campaign ID                              |
-| `CampaignName` | Yes      | string  | Campaign Name                            |
 | `Merchant`     | Yes      | object  | Merchant properties                      |
 | `Merchant.Id`  | Yes      | integer | Merchant ID                              |
-| `IsAtWork`     | No       | boolean | Only required if used via AtWork website |
 
 ```javascript
 window.giveworxWidget.init({
-  CampaignId: ID,
-  CampaignName: CAMPAIGN_NAME,
   Merchant: {
     Id: MERCHANT_ID,
   },
