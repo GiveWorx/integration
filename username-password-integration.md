@@ -32,19 +32,11 @@ If you're looking to integrate with your website:
 | `Merchant`     | Yes      | object  | Merchant properties                      |
 | `Merchant.Id`  | Yes      | integer | Merchant ID                              |
 
-```js
-{	
-    "Username": "USERNAME",
-    "Password": "PASSWORD",
-    "Merchant": {"Id":"MERCHANT_ID"},
-    "DonationDetails": {
-        "DonorCardDetails":{}
-    }
-}
-```
 
 ```js
 window.giveworxWidget.init({
+  Username": "USERNAME",
+  Password": "PASSWORD",
   Merchant: {
     Id: MERCHANT_ID,
   },
