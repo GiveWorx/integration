@@ -58,10 +58,24 @@ If you're willing to create your own custom integration, follow the specificatio
 
 # API Specifications (custom integration)
 
-`API_URL`: **production**: https://donate.giveworx.com | **qc**: https://qcdonate.giveworx.com
+ENV                                   | Method  |  Endpoint
+--------------------------------------|---------|-------------------------
+`PROD` https://donate.giveworx.com    | `POST`  | **/Transaction/Initiate**
+`QC` https://donate.giveworx.com      | `POST`  | **/Transaction/Initiate**
 
 
-> `POST` API_URL/Transaction/Initiate
+**Example request**
+
+Content-Type: application/json
+```json
+{	
+    "Token": "TOKEN",
+    "Merchant": {"Id":"MERCHANT_ID"},
+    "DonationDetails": {
+        "DonorCardDetails":{}
+    }
+}
+```
 
 **JSON Schema**
 
