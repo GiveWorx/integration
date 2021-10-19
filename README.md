@@ -77,9 +77,29 @@ Content-Type: application/json
 }
 ```
 
-**JSON Schema**
+**Example response**  
 
 ```json
+{
+  "requestID": "9d721756-3f24-401e-b940-23e51ad54286",
+  "isRedirect": false,
+  "redirectURL": "https://qcdonate.giveworx.com/Donation/Index",
+  "returnURL": null,
+  "merchantJSURL": "https://qcdonate.giveworx.com/js/merchant.js",
+  "languageID": 1,
+  "merchantID": 1687,
+  "responseType": 0,
+  "transactionStatusTypes": 0,
+  "landingPageResponseDisplayText": "",
+  "errorCode": "00",
+  "errorMessage": "Call completed successfully.",
+  "campaignId": 155
+}
+```
+
+<details>
+    <summary><strong>Request JSON Schema</strong></summary>
+<pre>
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -184,12 +204,12 @@ Content-Type: application/json
     "donationDetails"
   ]
 }
-```
-Response object:
-
-**JSON Schema**
-
-```json
+</pre>
+</details>
+    
+<details>
+    <summary><strong>Response JSON Schema</strong></summary>
+<pre> 
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -250,73 +270,8 @@ Response object:
     "campaignId"
   ]
 }
-```
-Response object:
-
-**JSON Schema**
-
-```json
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "requestID": {
-      "type": "guid"
-    },
-    "isRedirect": {
-      "type": "boolean"
-    },
-    "redirectURL": {
-      "type": "string"
-    },
-    "returnURL": {
-      "type": "string"
-    },
-    "merchantJSURL": {
-      "type": "string"
-    },
-    "languageID": {
-      "type": "integer"
-    },
-    "merchantID": {
-      "type": "integer"
-    },
-    "responseType": {
-      "type": "integer"
-    },
-    "transactionStatusTypes": {
-      "type": "integer"
-    },
-    "landingPageResponseDisplayText": {
-      "type": "string"
-    },
-    "errorCode": {
-      "type": "string"
-    },
-    "errorMessage": {
-      "type": "string"
-    },
-    "campaignId": {
-      "type": "integer"
-    }
-  },
-  "required": [
-    "requestID",
-    "isRedirect",
-    "redirectURL",
-    "returnURL",
-    "merchantJSURL",
-    "languageID",
-    "merchantID",
-    "responseType",
-    "transactionStatusTypes",
-    "landingPageResponseDisplayText",
-    "errorCode",
-    "errorMessage",
-    "campaignId"
-  ]
-}
-```
+</pre>
+</details>
 **Properties info:**
 
 | Key            |  Type    | Description                              |
