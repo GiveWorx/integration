@@ -317,10 +317,11 @@ Response object:
   ]
 }
 ```
-Properties info:
+**Properties info:**
+
 | Key            |  Type    | Description                              |
 | -------------- |  ------- | ---------------------------------------- |
-| `requestID`   |  guid |                             |
+| `requestID`   |  guid |   token used for "/Donation/Index" API call. This call return the popup HTML.                       |
 | `isRedirect` |  boolean  | true when the redirect is hosted by customer, false otherwise                           |
 | `redirectURL`     |  string  | API_URL + "/Donation/Index" - this is the API called to return the donation popup html                    |
 | `returnURL`  |  string | the URL to return after the donation is done                            |
