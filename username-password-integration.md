@@ -34,5 +34,5 @@ If you're looking to integrate with your website:
 | `IsAtWork`     | No       | boolean | Only required if used via AtWork website |
 
 ```js
-TODO
+TO DO
 ```
