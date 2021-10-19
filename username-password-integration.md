@@ -28,7 +28,7 @@ If you're looking to integrate with your website:
 | Key            | Required | Type    | Description                              |
 | -------------- | -------- | ------- | ---------------------------------------- |
 | `Username`     | Yes      | string  | Backoffice account                       |
-| `Password`     | Yes      | string  | Backoffice accoun password               |
+| `Password`     | Yes      | string  | Backoffice account password               |
 | `Merchant`     | Yes      | object  | Merchant properties                      |
 | `Merchant.Id`  | Yes      | integer | Merchant ID                              |
 
