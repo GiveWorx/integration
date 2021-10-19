@@ -272,6 +272,7 @@ Content-Type: application/json
 }
 </pre>
 </details>
+
 **Properties info:**
 
 | Key            |  Type    | Description                              |
