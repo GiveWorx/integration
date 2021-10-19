@@ -44,8 +44,7 @@ window.giveworxWidget.init({
   },
   DonationDetails: {
     DonorCardDetails: {},
-  },
-  IsAtWork: false,
+  }
 });
 ```
 
