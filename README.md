@@ -165,3 +165,69 @@ If you're willing to create your own custom integration, follow the specificatio
   ]
 }
 ```
+Response object:
+
+**JSON Schema**
+
+```json
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "requestID": {
+      "type": "guid"
+    },
+    "isRedirect": {
+      "type": "boolean"
+    },
+    "redirectURL": {
+      "type": "string"
+    },
+    "returnURL": {
+      "type": "string"
+    },
+    "merchantJSURL": {
+      "type": "string"
+    },
+    "languageID": {
+      "type": "integer"
+    },
+    "merchantID": {
+      "type": "integer"
+    },
+    "responseType": {
+      "type": "integer"
+    },
+    "transactionStatusTypes": {
+      "type": "integer"
+    },
+    "landingPageResponseDisplayText": {
+      "type": "string"
+    },
+    "errorCode": {
+      "type": "string"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "campaignId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "requestID",
+    "isRedirect",
+    "redirectURL",
+    "returnURL",
+    "merchantJSURL",
+    "languageID",
+    "merchantID",
+    "responseType",
+    "transactionStatusTypes",
+    "landingPageResponseDisplayText",
+    "errorCode",
+    "errorMessage",
+    "campaignId"
+  ]
+}
+```
