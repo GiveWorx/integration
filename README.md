@@ -4,7 +4,7 @@ Welcome to the GiveWorx API documentation!
 
 > If you just want to preview your widget, you can do it [here](https://main.d285tagm1r2kq6.amplifyapp.com/).
 
-## Usage of the GiveWorx Widget (default integration)
+## Usage of the GiveWorx Widget (token integration)
 
 If you're looking to integrate with your website:
 
