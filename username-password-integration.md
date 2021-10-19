@@ -1,6 +1,6 @@
 # Username/password integration
 
-> ✅ [Token integration](README.md) the is recommended. ⚠️ The username and password method will no longer be supported in the near future.
+> ⚠️ The username and password method will no longer be supported in the near future. Use ✅  [Token integration](README.md) instead.
 
 ## Usage of the GiveWorx Widget
 
