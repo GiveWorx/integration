@@ -304,12 +304,12 @@ The values should be taken from the previous call response.
 Content-Type: application/json
 ```json
 {	
-    "guid": "requestID",
-    "isredirect": "isRedirect",
-    "returnURL": "returnURL",
-    "languageID": "languageID",
-    "q2CallbackUrl": "q2CallbackUrl",
-    "userId": "userId",
+    "guid": "9d721756-3f24-401e-b940-23e51ad54286",
+    "isredirect": false,
+    "returnURL": null,
+    "languageID": 1,
+    "q2CallbackUrl": null,
+    "userId": null,
 }
 ```
 
