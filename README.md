@@ -61,7 +61,7 @@ If you're willing to create your own custom integration, follow the specificatio
 ENV                                   | Method  |  Endpoint
 --------------------------------------|---------|-------------------------
 `PROD` https://donate.giveworx.com    | `POST`  | **/Transaction/Initiate**
-`QC` https://donate.giveworx.com      | `POST`  | **/Transaction/Initiate**
+`QC` https://qcdonate.giveworx.com    | `POST`  | **/Transaction/Initiate**
 
 
 **Example request**
@@ -297,7 +297,7 @@ Content-Type: application/json
 ENV                                   | Method  |  Endpoint
 --------------------------------------|---------|-------------------------
 `PROD` https://donate.giveworx.com    | `POST`  | **/Donation/Index**
-`QC` https://donate.giveworx.com      | `POST`  | **/Donation/Index**
+`QC` https://qcdonate.giveworx.com    | `POST`  | **/Donation/Index**
 
 
 **Example request**
