@@ -323,8 +323,8 @@ Content-Type: application/json
 | `isredirect`     |  boolean    |   the isredirect returned from previous call                       |
 | `returnURL`     |  string    |   the returnURL returned from previous call                       |
 | `languageID`     |  string    |   the languageID returned from previous call                       |
-| `q2CallbackUrl`     |  string    |   this field is used to enable the recurrent transactions                       |
-| `userId`     |  string    |   this field is used to enable the recurrent transactions.                       |
+| `q2CallbackUrl`     |  string    |   this field is used to enable the recurrent transactions. required when recurrent transactions are active, null otherwise                       |
+| `userId`     |  string    |   this field is used to enable the recurrent transactions. required when recurrent transactions are active, null otherwise                         |
 
 
 
