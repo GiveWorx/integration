@@ -53,8 +53,8 @@ If you're willing to create your own custom integration, follow the specificatio
 
 # API Specifications (custom integration)
 
-**The integration consists on 2 steps:**
-1. Initiate a transaction: on this call the username&password or the token are validated. If the data is valid, a token is generated and returned to UI (along with other data needed)
+**The integration uses [Two-phase commit protocol](https://en.wikipedia.org/wiki/Two-phase_commit_protocol):**
+1. Initiate a transaction: on this call the ~~username&password~~ (deprecated) or the token is validated. If the data is valid, a token is generated and returned to UI (along with other data needed)
 2. Initiate a donation transaction using the data received on call #1. The HTML popup will be sent as response.
 
 **Step 1**
