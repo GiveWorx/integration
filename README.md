@@ -43,6 +43,16 @@ window.giveworxWidget.init({
 });
 ```
 
+if you want the initialization to take place after the page loads:
+
+```javascript
+  const asyncScript = document.querySelector("script[src*=giveworx]");
+  
+  asyncScript.addEventListener("load", function () {
+    // -- window.giveWorx.init({options})
+  })
+```
+
 **Other ways of integration:**
 
 * [Username/password](username-password-integration.md) ⚠️ deprecated
