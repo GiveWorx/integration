@@ -54,10 +54,11 @@ if you want the initialization to take place after the page loads:
 ```
 
 **Other ways of integration:**
-
 * [Username/password](username-password-integration.md) ⚠️ deprecated
 * [AtWork](atwork-integration.md)
 
+**Examples**
+* [Auto load](/examples/auto-load.html)
 
 If you're willing to create your own custom integration, follow the specifications below.
 
